@@ -1,0 +1,327 @@
+<html>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <body>
+        <nav>
+                <div class="nav-wrapper" style="background: #0080FF">
+                  <a href="#" class="brand-logo">Friends</a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="sass.html">BFS implementation</a></li>
+                   
+                  </ul>
+                </div>
+              </nav>
+    
+<script src="jquery-3.2.1.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            
+            
+        
+            
+
+        });
+
+        var node_depth;
+        
+        
+        class Queue 
+        {
+            constructor()
+            {
+                
+                this.elements = [];
+        
+            }
+        
+            enqueue(node){
+                this.elements.push(node);
+            }
+        
+            dequeue(){
+                return this.elements.shift();
+            }
+        
+            isEmpty(node){
+                return this.elements.length == 0;
+            }
+        
+          
+        
+        }
+
+
+        
+        class Graph {
+           constructor() {
+              this.edges = {};
+              this.nodes = [];
+           }
+        
+           addNode(node) {
+              this.nodes.push(node);
+              this.edges[node] = [];
+           }
+        
+          
+        
+           addEdge(node1, node2) {
+                this.edges[node1].push(node2);
+                this.edges[node2].push(node1);
+           }
+        
+       
+           BFS(node) {
+           // Create a Queue and add our initial node in it
+           let q = new Queue(this.nodes.length);
+           const explored = new Set([1, 2, 3, 4, 5]);
+           q.enqueue(node);
+            node_depth = 0
+           // Mark the first node as explored explored.
+           explored.add(node);
+document.write("<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css'");
+document.write(" <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'/>");
+
+
+
+
+
+
+
+
+               
+              
+              
+                  
+
+                   
+                    
+                    
+                  
+                
+              
+           // We'll continue till our queue gets empty
+           document.write('<div class="row" id="friends">')
+           while (!q.isEmpty()) {
+              let t = q.dequeue();
+              console.log(t)
+              
+        
+              // Log every element that comes out of the Queue
+              
+            if(node_depth==1)
+            {
+
+                document.write('<nav>')
+document.write(' <div class="nav-wrapper" style="background: #0080FF">')
+document.write('<a href="#" class="brand-logo">Friends</a>')
+document.write('<ul id="nav-mobile" class="right hide-on-med-and-down">')
+document.write(' <li><a href="collapsible.html">BFS implementation</a></li>')
+document.write('</ul>')
+document.write('</div>')
+document.write('</nav>')
+document.write('<br>')
+              
+                        document.write("<div class='col s12 m3'>")
+                        document.write("<div class='card'>")
+                        document.write(" <div class='card-image'>")
+                        document.write(" <img src='user.png'>")
+                        document.write(" </div>")
+                       document.write(' <div class="card-content">')
+                        document.write("<p>Name : '"+t+"'</p>")
+                        document.write("</div>")
+                        document.write('<div class="card-action" style="background: #0080FF">')
+                        document.write("<a href='#' style='color: white'>Friend</a>")
+                        document.write(" </div>")
+                        document.write(" </div>")
+                        document.write(" </div>")
+                                                  
+                                                   
+   
+       
+   
+   
+
+
+
+
+
+
+
+
+             
+              console.log(t);
+            }
+
+            if(node_depth==2)
+            {
+
+            
+              
+                        document.write("<div class='col s12 m3'>")
+                        document.write("<div class='card'>")
+                        document.write(" <div class='card-image'>")
+                        document.write(" <img src='user.png'>")
+                   document.write(" </div>")
+                       document.write(' <div class="card-content">')
+                           document.write("<p>Name : '"+t+"'</p>")
+                               document.write("</div>")
+                                   document.write('<div class="card-action" style="background: #0080FF">')
+                                       document.write("<a href='#' style='color: white'>Mutual Friend</a>")
+                                           document.write(" </div>")
+                                               document.write(" </div>")
+                                                   document.write(" </div>")
+                                                  
+                                                   
+   
+       
+   
+   
+
+
+
+
+
+
+
+
+             
+              console.log(t);
+            }
+              node_depth += 1
+        
+              // 1. In the edges object, we search for nodes this node is directly connected to.
+              // 2. We filter out the nodes that have already been explored.
+              // 3. Then we mark each unexplored node as explored and add it to the queue.
+              this.edges[t]
+              .filter(n => !explored.has(n))
+              .forEach(n => {
+                 explored.add(n);
+                 q.enqueue(n);
+              });
+           }
+           document.write("</div>")
+           
+        }
+        
+        }
+        
+        
+        let g = new Graph();
+        g.addNode("Shoaib Shaikh");
+        g.addNode("Tejaswini Ugale");
+        g.addNode("Tanmay Kulkarni");
+        g.addNode("Shantanu Kukade");
+        g.addNode("Sarang Barshikar");
+        g.addNode("Dhanesh Pawar");
+        g.addNode("Rohit Bhosale");
+        var lmn = 0;
+        </script>
+        
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <br>
+        <center>
+              <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12 large">
+          <i class="material-icons prefix" onclick="call()">zoom_in</i>
+          <textarea id="icon_prefix2" class="materialize-textarea large" ></textarea>
+          <label for="icon_prefix2">Search Here</label>
+        </div>
+      </div>
+    </form>
+  </div>
+</center>
+
+        <script>
+            function call()
+            {
+                var p = document.getElementById("icon_prefix2").value 
+                g.BFS(p)
+
+            }
+
+        document.write("<div class='row' id='start'>")
+        for(lmn=0;lmn<6;lmn++)
+        {
+            
+            document.write("<div class='col s12 m3' id=g.nodes[lmn]>")
+                        document.write("<div class='card'>")
+                        document.write(" <div class='card-image'>")
+                        document.write(" <img src='user.png'>")
+                   document.write(" </div>")
+                       document.write(' <div class="card-content">')
+                            str = g.nodes[lmn].replace(/"/g,"")
+                       
+                           document.write("")
+                               document.write("</div>")
+                                   document.write('<div class="card-action" style="background: #0080FF">')
+                                   
+                                       document.write("<h5><p style='color:white'>'"+str+"'</p></h5>")
+                                      
+                                           document.write(" </div>")
+                                               document.write(" </div>")
+                                                   document.write(" </div>")
+
+                                                   
+           
+        }
+        document.write(" </div>")
+        g.addEdge("Shoaib Shaikh", "Tanmay Kulkarni");
+        g.addEdge("Shoaib Shaikh", "Tejaswini Ugale");
+        g.addEdge("Shoaib Shaikh", "Shantanu Kukade");
+        g.addEdge("Shantanu Kukade", "Sarang Barshikar");
+        g.addEdge("Sarang Barshikar", "Dhanesh Pawar");
+        g.addEdge("Tejaswini Ugale", "Rohit Bhosale");
+      
+     
+
+        </script>
+
+
+   
+
+
+    
+</body>
+   
+
+  
+        
+      
+
+
+     
+<script>
+
+
+
+</script>
+
+        
+          
+           
+             
+            
+           
+           
+              
+            
+            
+              
+           
+         
+       
+     
+
+
+
+</body>
+
+</html>
+
+
